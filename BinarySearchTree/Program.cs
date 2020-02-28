@@ -10,8 +10,6 @@ namespace BinarySearchTree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
-            Console.WriteLine("This the the Binary Search Tree");
             BinaryTree binarytree = new BinaryTree();
             binarytree.CreateTree();
             Console.ReadLine();
