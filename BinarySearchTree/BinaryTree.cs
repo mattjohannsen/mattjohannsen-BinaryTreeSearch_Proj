@@ -26,6 +26,9 @@ namespace BinarySearchTree
                 root = new Node(data);
             }
         }
-
+        public bool Search(int inputData)
+        {
+            return false;
+        }
     }
 }
