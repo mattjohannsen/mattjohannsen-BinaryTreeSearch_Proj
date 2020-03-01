@@ -15,12 +15,31 @@ namespace BinarySearchTree
         {
             root = null;
         }
-
-        public void CreateTree()
+        public void Insert(int data)
         {
-            root = new Node(50);
+            if (root == null)
+            {
+                root = new Node(data);
+            }
+            else
+            {
+                root.Insert(data);
+            }
 
-            
+            //if (data < root.data)
+            //{
+                
+            //    Node temp = new Node(data);
+            //    //temp.left = root.left;
+            //    temp.right = root;
+            //    //root = temp;
+            //}
+        }
+        public void Insert(int data, Node inputLeft, Node inputRight)
+        {
+            Node temp = new Node(data);
+            temp.left = inputLeft;
+            temp.right = inputRight;
         }
     }
 }
