@@ -79,8 +79,7 @@ namespace BinarySearchTree
                 {
                     //If this node's right node is not empty, then insert the inputData into this right node to continue.
                     //This process will continue until we find the value or run out of options.
-                    right.Search(inputData);
-                    return true;
+                    return right.Search(inputData);
                 }
             }
             else
@@ -96,8 +95,7 @@ namespace BinarySearchTree
                 {
                     //If this node's left node is not empty, then insert the inputData into this left node to continue.
                     //This process will continue until we find the value or run out of options.
-                    left.Search(inputData);
-                    return true;
+                    return left.Search(inputData);
                 }
             }
         }

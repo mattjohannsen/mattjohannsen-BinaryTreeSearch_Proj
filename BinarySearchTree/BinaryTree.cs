@@ -46,8 +46,7 @@ namespace BinarySearchTree
                 {
                     //If this node's right node is not empty, then search this node for the desired value.
                     //This process will continue until we find the desired value or all null values.
-                    root.right.Search(inputData);
-                    return true;
+                    return root.right.Search(inputData);
                 }
             }
             else
@@ -63,11 +62,9 @@ namespace BinarySearchTree
                 {
                     //If this node's left node is not empty, then search this node for the desired value.
                     //This process will continue until we find the desired value or all null values.
-                    root.left.Search(inputData);
-                    return true;
+                    return root.left.Search(inputData);
                 }
             }
-            return false;
         }
     }
 }

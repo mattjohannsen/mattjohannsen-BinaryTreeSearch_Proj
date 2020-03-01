@@ -21,7 +21,13 @@ namespace BinarySearchTree
             //binarytree.Search(93);
             //Console.WriteLine($"{binarytree.Search(105)}");
             Console.WriteLine($"{binarytree.Search(100)}");
+            Console.WriteLine($"{binarytree.Search(82)}");
+            Console.WriteLine($"{binarytree.Search(116)}");
+            Console.WriteLine($"{binarytree.Search(78)}");
             Console.WriteLine($"{binarytree.Search(93)}");
+            Console.WriteLine($"{binarytree.Search(105)}");
+            Console.WriteLine($"{binarytree.Search(123)}");
+            Console.WriteLine($"{binarytree.Search(77)}");
             Console.ReadLine();
         }
     }
