@@ -58,5 +58,47 @@ namespace BinarySearchTree
                 }
             }
         }
+        public bool Search(int inputData)
+        {
+            //If the inputData is equal to the current data. YOU FOUND IT!
+            if(data == inputData)
+            {
+                Console.WriteLine($"       We found {data}! It is in our Binary Search Tree");
+                return true;
+            }
+            //If the inputData is greater than the current data, then go right.
+            else if (inputData > data)
+            {
+                //If this node's right node is empty, then you have run out of option. Value not found.
+                if (right == null)
+                {
+                    Console.WriteLine($"       {inputData} not found in Binary Search Tree");
+                    return false;
+                }
+                else
+                {
+                    //If this node's right node is not empty, then insert the inputData into this right node to continue.
+                    //This process will continue until we find the value or run out of options.
+                    right.Search(inputData);
+                }
+            }
+            else
+            //If the inputData is less than the current data, then go left.
+            {
+                //If this node's left node is empty, then you have run out of option. Value not found.
+                if (left == null)
+                {
+                    Console.WriteLine($"       {inputData} not found in Binary Search Tree");
+                    return false;
+                }
+                else
+                {
+                    //If this node's left node is not empty, then insert the inputData into this left node to continue.
+                    //This process will continue until we find the value or run out of options.
+                    left.Search(inputData);
+                }
+            }
+            return false;
+        }
     }
 }
