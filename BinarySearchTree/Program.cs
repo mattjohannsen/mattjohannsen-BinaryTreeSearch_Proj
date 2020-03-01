@@ -19,7 +19,9 @@ namespace BinarySearchTree
             binarytree.Insert(105);
             binarytree.Insert(123);
             //binarytree.Search(93);
-            Console.WriteLine($"{binarytree.Search(105)}");
+            //Console.WriteLine($"{binarytree.Search(105)}");
+            Console.WriteLine($"{binarytree.Search(100)}");
+            Console.WriteLine($"{binarytree.Search(93)}");
             Console.ReadLine();
         }
     }
