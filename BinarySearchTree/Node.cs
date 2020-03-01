@@ -50,6 +50,12 @@ namespace BinarySearchTree
                     //If the leftnode is empty, then create a left node for this node.
                     left = new Node(inputData);
                 }
+                else
+                {
+                    //If this node's left node is not empty, then insert the inputData into this left node to continue.
+                    //This process will continue until we find an empty place to create a node for our value.
+                    left.Insert(inputData);
+                }
             }
         }
     }
