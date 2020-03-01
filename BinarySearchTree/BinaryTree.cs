@@ -26,11 +26,6 @@ namespace BinarySearchTree
                 root = new Node(data);
             }
         }
-        public void Insert(int data, Node inputLeft, Node inputRight)
-        {
-            Node temp = new Node(data);
-            temp.left = inputLeft;
-            temp.right = inputRight;
-        }
+
     }
 }
