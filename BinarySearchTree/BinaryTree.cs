@@ -17,23 +17,14 @@ namespace BinarySearchTree
         }
         public void Insert(int data)
         {
-            if (root == null)
-            {
-                root = new Node(data);
-            }
-            else
+            if (root != null)
             {
                 root.Insert(data);
             }
-
-            //if (data < root.data)
-            //{
-                
-            //    Node temp = new Node(data);
-            //    //temp.left = root.left;
-            //    temp.right = root;
-            //    //root = temp;
-            //}
+            else
+            {
+                root = new Node(data);
+            }
         }
         public void Insert(int data, Node inputLeft, Node inputRight)
         {
