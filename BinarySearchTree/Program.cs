@@ -16,8 +16,8 @@ namespace BinarySearchTree
             binarytree.Insert(116);
             binarytree.Insert(78);
             binarytree.Insert(93);
-            //binarytree.Insert(105);
-            //binarytree.Insert(123);
+            binarytree.Insert(105);
+            binarytree.Insert(123);
             Console.ReadLine();
         }
     }
