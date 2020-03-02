@@ -18,16 +18,16 @@ namespace BinarySearchTree
             binarytree.Insert(93);
             binarytree.Insert(105);
             binarytree.Insert(123);
-            //binarytree.Search(93);
-            //Console.WriteLine($"{binarytree.Search(105)}");
-            //Console.WriteLine($"{binarytree.Search(100)}");
-            //Console.WriteLine($"{binarytree.Search(82)}");
-            //Console.WriteLine($"{binarytree.Search(116)}");
-            //Console.WriteLine($"{binarytree.Search(78)}");
-            //Console.WriteLine($"{binarytree.Search(93)}");
-            //Console.WriteLine($"{binarytree.Search(105)}");
-            //Console.WriteLine($"{binarytree.Search(123)}");
-            //Console.WriteLine($"{binarytree.Search(77)}");
+            //binarytree.Search(binarytree.root, 93);
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 105)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 100)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 82)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 116)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 78)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 93)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 105)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 123)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 77)}");
             Console.ReadLine();
         }
     }

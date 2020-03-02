@@ -9,7 +9,7 @@ namespace BinarySearchTree
     public class BinaryTree
     {
         //first node in tree
-        private Node root;
+        public Node root;
 
         public BinaryTree()
         {
@@ -20,11 +20,6 @@ namespace BinarySearchTree
             if (root != null)
             //The root is not empty, so let's figure out where to put the new node
             {
-                //Below is old code for Insert method on BinaryTree
-                //root.Insert(data);
-                //Above is the old code for Insert method on BinaryTree
-
-                //Below is new code for Insert method on BinaryTree
                 //If the inputData is greater than the current data, then go right.
                 if (inputData > root.data)
                 {
@@ -98,18 +93,18 @@ namespace BinarySearchTree
                 }
             }
         }
-        public bool Search(int inputData)
+        public bool Search(Node inputNode, int inputData)
         {
-            if (root.data == inputData)
+            if (inputNode.data == inputData)
             {
                 Console.WriteLine($"       We found {inputData}! It is in our Binary Search Tree");
                 return true;
             }
             //If the inputData is greater than the root data, then go right.
-            else if (inputData > root.data)
+            else if (inputData > inputNode.data)
             {
                 //If this right node is empty, then this value was not found in our Binary Search tree.
-                if (root.right == null)
+                if (inputNode.right == null)
                 {
                     Console.WriteLine($"       {inputData} not found in Binary Search Tree");
                     return false;
@@ -118,14 +113,14 @@ namespace BinarySearchTree
                 {
                     //If this node's right node is not empty, then search this node for the desired value.
                     //This process will continue until we find the desired value or all null values.
-                    return root.right.Search(inputData);
+                    return Search(inputNode.right, inputData);
                 }
             }
             else
             //If the inputData is less than the root data, then go left.
             {
                 //If this left node is empty, then this value was not found in our Binary Search tree.
-                if (root.left == null)
+                if (inputNode.left == null)
                 {
                     Console.WriteLine($"       {inputData} not found in Binary Search Tree");
                     return false;
@@ -134,7 +129,7 @@ namespace BinarySearchTree
                 {
                     //If this node's left node is not empty, then search this node for the desired value.
                     //This process will continue until we find the desired value or all null values.
-                    return root.left.Search(inputData);
+                    return Search(inputNode.left, inputData);
                 }
             }
         }
