@@ -23,6 +23,7 @@ namespace BinarySearchTree
                 //Below is old code for Insert method on BinaryTree
                 //root.Insert(data);
                 //Above is the old code for Insert method on BinaryTree
+
                 //Below is new code for Insert method on BinaryTree
                 //If the inputData is greater than the current data, then go right.
                 if (inputData > root.data)
@@ -36,7 +37,7 @@ namespace BinarySearchTree
                     {
                         //If this node's right node is not empty, then insert the inputData into this right node to continue.
                         //This process will continue until we find an empty place to create a node for our value.
-                        root.right.Insert(inputData);
+                        Insert(root.right, inputData);
                     }
                 }
                 else
@@ -52,7 +53,7 @@ namespace BinarySearchTree
                     {
                         //If this node's left node is not empty, then insert the inputData into this left node to continue.
                         //This process will continue until we find an empty place to create a node for our value.
-                        root.left.Insert(inputData);
+                        Insert(root.left, inputData);
                     }
                 }
             }
@@ -60,6 +61,41 @@ namespace BinarySearchTree
             //The root is empty, so make a new root node
             {
                 root = new Node(inputData);
+            }
+        }
+        public void Insert(Node inputNode, int inputData)
+        //The node is not empty, so let's figure out where to put the new node
+        {
+            //If the inputData is greater than the current data, then go right.
+            if (inputData > inputNode.data)
+            {
+                //If this node's right node is empty, then create a right node for this node.
+                if (inputNode.right == null)
+                {
+                    inputNode.right = new Node(inputData);
+                }
+                else
+                {
+                    //If this node's right node is not empty, then insert the inputData into this right node to continue.
+                    //This process will continue until we find an empty place to create a node for our value.
+                    Insert(inputNode.right, inputData);
+                }
+            }
+            else
+            //The inputData must be smaller than the current Node's data, so we will go left to search for a spot to create our new node.
+            {
+                //If the inputData is less than or equal to the data, then insert into the left node.
+                if (inputNode.left == null)
+                {
+                    //If the leftnode is empty, then create a left node for this node.
+                    inputNode.left = new Node(inputData);
+                }
+                else
+                {
+                    //If this node's left node is not empty, then insert the inputData into this left node to continue.
+                    //This process will continue until we find an empty place to create a node for our value.
+                    Insert(inputNode.left, inputData);
+                }
             }
         }
         public bool Search(int inputData)
