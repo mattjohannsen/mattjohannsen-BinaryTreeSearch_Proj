@@ -37,6 +37,24 @@ namespace BinarySearchTree
             Console.WriteLine($"{binarytree.Search(binarytree.root, 110)}");
             Console.WriteLine($"{binarytree.Search(binarytree.root, 117)}");
             Console.WriteLine($"{binarytree.Search(binarytree.root, 125)}");
+            Console.WriteLine("Now these values will be added.");
+            binarytree.Insert(77);
+            binarytree.Insert(79);
+            binarytree.Insert(85);
+            binarytree.Insert(95);
+            binarytree.Insert(102);
+            binarytree.Insert(110);
+            binarytree.Insert(117);
+            binarytree.Insert(125);
+            Console.WriteLine("These new values will now result in positive searches:");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 77)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 79)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 85)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 95)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 102)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 110)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 117)}");
+            Console.WriteLine($"{binarytree.Search(binarytree.root, 125)}");
             Console.ReadLine();
         }
     }
